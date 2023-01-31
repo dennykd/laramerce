@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-primary {
+    @apply bg-[#2d2d2d] text-white;
+}
+.btn-danger {
+    @apply bg-red-700 text-white;
+}
+
+.form-control {
+    @apply w-full border-gray-300 rounded drop-shadow-sm;
+}
+
+/* Product Detail Images */
+.featured-img {
+    @apply h-[280px] w-[280px] object-cover rounded-lg cursor-pointer border-black border border-solid;
+}
+
+.thumbnail-product {
+    @apply h-14 w-14 flex-none object-cover rounded-lg cursor-pointer opacity-60 m-1 border-black border border-solid hover:opacity-100;
+}
+
+.thumb-slide-wrapper {
+    @apply w-[280px] flex items-center;
+}
+.thumb-slider {
+    @apply w-[280px] flex flex-row flex-nowrap overflow-x-hidden justify-center;
+}
+.active_thumb {
+    @apply opacity-100;
+}
+.active-featured-img {
+    @apply opacity-100;
+}
+.arrow {
+    @apply opacity-70 w-6 h-6 font-extrabold hover:opacity-100;
+}
+/* Product Detail Images */
+
+/* Images Upload */
+.upload__box {
+    @apply mt-[9px];
+}
+
+.upload__inputfile {
+    @apply w-[0.1px] h-[0.1px] opacity-0 overflow-hidden absolute -z-[1];
+}
+.upload__btn {
+    @apply inline-block font-semibold text-center min-w-[116px] p-[5px] 
+    transition-all ease-linear duration-300 cursor-pointer border-2 border-solid rounded-lg leading-6 text-sm;
+}
+.upload__btn-box {
+    @apply mb-[10px];
+}
+.upload__img-wrap {
+    @apply flex flex-wrap m-[-10px];
+}
+.upload__img-box {
+    @apply w-[200px] p-[10px] mb-[12px];
+}
+.upload__img-close {
+    @apply w-6 h-6 rounded-full bg-black opacity-50 absolute top-[10px] right-[10px] text-center leading-6 z-[1] cursor-pointer;
+}
+.upload__img-close:after {
+    @apply content-['\2716'] text-sm text-white text-center;
+}
+.img-bg {
+    @apply bg-no-repeat bg-center bg-cover relative pb-[100%];
+}
+/* Images Upload */

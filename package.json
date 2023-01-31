@@ -3,7 +3,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "builder": "npx tailwindcss -i ./resources/css/app.css -o ./public/dist/css/app.css --watch"
+        "builder": "npx tailwindcss -i ./resources/css/app.css -o ./public/dist/css/app.css --watch"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",

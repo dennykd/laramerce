@@ -18,9 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'phone', 'address'
     ];
 
     /**
@@ -41,4 +39,37 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // instant value
+
+    // relation
+    public function wishlists()
+    {
+        return $this->hasMany(Whislist::class, 'user_id');
+    }
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class, 'user_id');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'user_id');
+    }
+
+    // boot
+    public static function boot()
+    {
+        parent::boot();
+
+        self::creating(function ($model) {
+            // ... code here
+            $model->level = 'user';
+        });
+        self::deleted(function ($model) {
+            // ... code here
+            Cart::where('user_id', $model->id)->delete();
+        });
+    }
 }

@@ -14,7 +14,24 @@ return new class extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id();
+            $table->string('id')->primary();
+            // customer
+            $table->integer('user_id');
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email');
+            $table->text('comments');
+            // transaction
+            $table->integer('gross_amount');
+            $table->string('transaction_id');
+            $table->string('payment_token');
+            $table->string('transaction_status')->default('pending');
+            $table->string('payment_type')->nullable();
+            // shipping
+            $table->string('province');
+            $table->string('city');
+            $table->string('cost');
+            $table->text('address');
             $table->timestamps();
         });
     }

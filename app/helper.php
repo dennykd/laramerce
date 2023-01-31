@@ -25,8 +25,15 @@ if (!function_exists('ch_currency')) {
     function ch_currency($idr, $usd = false)
     {
         if ($usd == false) {
-            return 'Idr ' . number_format($idr, 0, ".", ",");
+            return 'IDR ' . number_format($idr, 0, ".", ",");
         }
-        return (session()->get('appcurrency') == 'idr' ? 'Idr ' : '$ ') . number_format(session()->get('appcurrency') == 'idr' ? $idr : $usd, 0, ".", ",");
+        return (session()->get('appcurrency') == 'idr' ? 'IDR ' : '$ ') . number_format(session()->get('appcurrency') == 'idr' ? $idr : $usd, 0, ".", ",");
+    }
+}
+
+if (!function_exists('asset')) {
+    function asset($path)
+    {
+        return env('APP_URL') . $path;
     }
 }
