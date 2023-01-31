@@ -7,7 +7,9 @@
             <div class="main-container container">
                 <ul class="breadcrumb">
                     <li><a href="{{ route('main') }}"><i class="fa fa-home"></i></a></li>
-                    <li><p>Shopping Cart</p></li>
+                    <li>
+                        <p>Shopping Cart</p>
+                    </li>
                 </ul>
 
                 <form class="row" action="{{ route('checkout') }}" method="POST">
@@ -239,7 +241,7 @@
                 </form>
             </div>
             <!-- //Main Container -->
-            @include('frontpage.frontpage-footer')
+            {{-- @include('frontpage.frontpage-footer') --}}
         </div>
     </div>
 @endsection

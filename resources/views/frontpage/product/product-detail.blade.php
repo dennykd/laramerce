@@ -7,8 +7,12 @@
             <div class="main-container container product-detail  desktop-offcanvas">
                 <ul class="breadcrumb">
                     <li><a href="{{ route('main') }}"><i class="fa fa-home"></i></a></li>
-                    <li><p>Products</p></li>
-                    <li><p>{{ $product->name }}</p></li>
+                    <li>
+                        <p>Products</p>
+                    </li>
+                    <li>
+                        <p>{{ $product->name }}</p>
+                    </li>
 
                 </ul>
 
@@ -907,7 +911,7 @@
             </div>
             <!--Middle Part End-->
             <!-- //Main Container -->
-            @include('frontpage.frontpage-footer')
+            {{-- @include('frontpage.frontpage-footer') --}}
         </div>
     </div>
 @endsection
