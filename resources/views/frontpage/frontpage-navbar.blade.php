@@ -208,6 +208,10 @@
                                                                 </a>
                                                             </li>
                                                         @endforeach
+                                                        {{-- <li class="loadmore">
+                                                            <i class="fa fa-plus-square-o"></i>
+                                                            <span class="more-view">More Categories</span>
+                                                        </li> --}}
                                                     </ul>
                                                 </div>
                                             </div>
