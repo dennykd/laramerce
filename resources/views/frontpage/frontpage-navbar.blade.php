@@ -197,7 +197,7 @@
                                             <div class="megamenu-pattern">
                                                 <div class="container-mega">
                                                     <ul class="megamenu">
-                                                        @foreach ($categories->take(9) as $item)
+                                                        @foreach ($categories->take(10) as $item)
                                                             <li class="item-vertical">
                                                                 <p class="close-menu"></p>
                                                                 <a href="{{ route('category', ['category' => $item]) }}"
@@ -208,10 +208,6 @@
                                                                 </a>
                                                             </li>
                                                         @endforeach
-                                                        <li class="loadmore">
-                                                            <i class="fa fa-plus-square-o"></i>
-                                                            <span class="more-view">More Categories</span>
-                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
